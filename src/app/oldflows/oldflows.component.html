@@ -1,0 +1,12 @@
+<!-- Old Control Flows -->
+<div *ngIf="isLoggedIn; else loggedOutTemplate">
+    <p>Welcome, user!</p>
+    <ul>
+      <li *ngFor="let item of items">
+        {{ item }}
+      </li>
+    </ul>
+  </div>
+  <ng-template #loggedOutTemplate>
+    <p>Please log in to continue.</p>
+  </ng-template>
